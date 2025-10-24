@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form action="https://formspree.io/f/movklbqb" method="POST">
+        <label>Nombre:
+        <input type="text" name="nombre" required>
+        </label><br>
+        <label>Email:
+        <input type="email" name="email" required>
+        </label><br>
+        <label>Mensaje:
+        <textarea name="mensaje" required></textarea>
+        </label><br>
+        <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section>
+            <h1>ECO.moda.infantil : Contacto y Gestión de Pedidos</h1>
+    
+    <table id="formulario-contacto">
+        <caption>Formulario de Contacto y Consulta de Artículo</caption>
+        <thead>
+            <tr>
+                <th colspan="2" class="formulario-header">Datos del Solicitante</th>
+                <th colspan="2" class="formulario-header">Detalles de la Consulta / Pedido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nombre Completo</th>
+                <td><input type="text" name="nombre" required></td>
+                <th>Artículo de Interés (Código/Nombre)</th>
+                <td>[Campo: SKU o Nombre del Ítem]</td>
+            </tr>
+            <tr>
+                <th>Correo Electrónico</th>
+                <td>[Campo: Correo]</td>
+                <th>Talla Consultada</th>
+                <td>[Selector: 0-3M, 6M, 1A, etc.]</td>
+            </tr>
+            <tr>
+                <th>Teléfono de Contacto</th>
+                <td>[Campo: Teléfono]</td>
+                <th>Prioridad de Respuesta</th>
+                <td>[Selector: Normal / Urgente]</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Mensaje / Pregunta</th>
+                <td rowspan="2">[Área de Texto para Mensaje]</td>
+                
+                <th>Método de Pago Preferido</th>
+                <td>[Tarjeta / Transferencia / Efectivo]</td>
+            </tr>
+            <tr>
+                <th>Código Postal para Envío</th>
+                <td>[Campo: CP]</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    
+    <table id="datos-enviados">
+        <caption>Seguimiento Ficticio de Consultas Recientes</caption>
+        
+        <thead>
+            <tr>
+                <th colspan="4" class="datos-enviados-header">Registro de Consultas y Estado del Pedido</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Mensaje Corto (Asunto)</th>
+                <th>Estado del Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**Valeria Núñez**</td>
+                <td>v.nunez@mail.com</td>
+                <td>Consulta por disponibilidad de vestido talle 6M.</td>
+                <td>**Pendiente** ⏳</td>
+            </tr>
+            <tr>
+                <td>Ricardo Funes</td>
+                <td>rfunes@web.net</td>
+                <td>Preguntando por costos de envío a Córdoba.</td>
+                <td>**Respondido** ✅</td>
+            </tr>
+            <tr>
+                <td>Martina Sosa</td>
+                <td>martina.s@ejemplo.org</td>
+                <td>Solicita más fotos del set de invierno (código 105).</td>
+                <td>**En Gestión** 📦</td>
+            </tr>
+            <tr>
+                <td>Lucas García</td>
+                <td>lgarcia@prueba.com</td>
+                <td>Informando error en la dirección de entrega.</td>
+                <td>**Urgente (Revisar)** ⚠️</td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+
+</body>
+</html>
