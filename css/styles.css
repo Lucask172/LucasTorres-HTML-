@@ -1,33 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Dancing+Script:wght@400..700&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --color-principal: rgb(5, 5, 106);
-    --color-secundario: brown;
-    --color-fondo: red;
-    --color-text: rgb(59, 17, 17);
+    --color-principal: rgb(58, 198, 245);
+    --color-secundario: #FFB693;
+    --color-botones: #FFD166
+    --color-fondo: #cbd6ce;
+    --color-text: #3C3C3C;
 }
 
 html {
     font-size: 16px;
     font-family: "Dancing Script", cursive;
     scroll-behavior: smooth;
-    
+
     body {
-        background-color: var(--color-principal);
+        background-color: var(--color-fondo);
 
         header {
+            color: var(--color-text);
+            font-size: 42px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             margin: 0 2rem;
+
             img {
                 width: 15rem;
             }
         }
+
+        ;
+
+        nav {
+            margin: 2rem auto;
+            ul {
+                list-style: none; 
+                display: flex;
+                justify-content: space-around;
+                padding: 1rem 0;
+                li {
+                border: 1px solid;
+                padding: 1.25rem 1rem;
+                border-radius: 20px;
+                background-color: var(--color-secundario);
+                }
+                a {
+                text-decoration: none;
+                color: var(--color-text);
+                font-size: 1.2rem;
+                }
+            }
+        }
+
+        ;
     }
 }
