@@ -84,12 +84,33 @@ html {
             }
         }
 
-        div.products {
+        .producto {
+            margin: 5rem;
+            h2 {
+                margin: 6 rem;
+            }
+        }
+
+        .products {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             align-content: flex-start;
             flex-wrap: wrap;
+            margin: 2rem;
+
+            .card {
+                background-color: var(--color-botones);
+                padding: 2rem;
+                border-radius: 5%;
+                a {
+                    text-decoration: none;
+                    color: var(--color-text);
+                }
+                img {
+                    border-radius: 5%;
+                }
+            }
         }
 
     }
