@@ -7,10 +7,10 @@
 }
 
 :root {
-    --color-principal: rgb(58, 198, 245);
+    --color-principal: #00b944d1;
     --color-secundario: #FFB693;
-    --color-botones: #FFD166
-    --color-fondo: #cbd6ce;
+    --color-botones: #ffcc44;
+    --color-fondo: #FAF8F0;
     --color-text: #3C3C3C;
 }
 
@@ -31,7 +31,7 @@ html {
             margin: 0 2rem;
 
             img {
-                width: 15rem;
+                width: 10rem;
             }
         }
 
@@ -39,25 +39,58 @@ html {
 
         nav {
             margin: 2rem auto;
+
             ul {
-                list-style: none; 
+                list-style: none;
                 display: flex;
                 justify-content: space-around;
                 padding: 1rem 0;
+
                 li {
-                border: 1px solid;
-                padding: 1.25rem 1rem;
-                border-radius: 20px;
-                background-color: var(--color-secundario);
+                    border: 1px solid;
+                    padding: .5rem .5rem;
+                    border-radius: 20px;
+                    background-color: var(--color-botones);
+                    cursor: pointer;
                 }
+
                 a {
-                text-decoration: none;
-                color: var(--color-text);
-                font-size: 1.2rem;
+                    text-decoration: none;
+                    color: var(--color-text);
+                    font-size: 1.2rem;
+                }
+
+                li:hover {
+                    background-color: var(--color-principal);
+                    color: var(--color-secundario);
+                    border: #3C3C3C;
                 }
             }
         }
 
-        ;
+        main {
+            background-image: url(../assets/img/logoprincipal.png);
+            height: 20rem;
+            background-size: fill;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            h2 {
+                position: relative;
+                top: 50%;
+                left: 10rem;
+                color: var(--color-principal);
+                text-shadow: 4px 4px 4px var(--color-secundario);
+            }
+        }
+
+        div.products {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            align-content: flex-start;
+            flex-wrap: wrap;
+        }
+
     }
 }
