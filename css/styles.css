@@ -27,8 +27,8 @@ html {
             font-size: 42px;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            margin: 0 2rem;
+            justify-content: flex-start;
+            margin: 0 1rem;
 
             img {
                 width: 10rem;
@@ -86,30 +86,46 @@ html {
 
         #producto {
             margin: 5rem;
+
             h2 {
                 margin: 6rem;
             }
         }
 
         .products {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            align-content: flex-start;
-            flex-wrap: wrap;
-            margin: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+            justify-items: center;
 
             .card {
                 background-color: var(--color-botones);
                 padding: 2rem;
                 border-radius: 5%;
+                border: 1px solid var(--color-secundario);
                 margin: 1rem;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+
                 a {
                     text-decoration: none;
+                    font-size: 1.2rem;
                     color: var(--color-text);
+
+                    img {
+                        border-radius: 5%;
+                        width: 100%;
+                    }
                 }
-                img {
-                    border-radius: 5%;
+                button {
+                    background-color: var(--color-secundario);
+                }
+                &:hover {
+                    transform:scale(1.1);
+                    img {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
