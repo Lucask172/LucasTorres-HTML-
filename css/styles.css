@@ -71,7 +71,7 @@ html {
         main {
             background-image: url(../assets/img/logoprincipal.png);
             height: 20rem;
-            background-size: fill;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
 
@@ -84,10 +84,10 @@ html {
             }
         }
 
-        .producto {
+        #producto {
             margin: 5rem;
             h2 {
-                margin: 6 rem;
+                margin: 6rem;
             }
         }
 
@@ -103,6 +103,7 @@ html {
                 background-color: var(--color-botones);
                 padding: 2rem;
                 border-radius: 5%;
+                margin: 1rem;
                 a {
                     text-decoration: none;
                     color: var(--color-text);
