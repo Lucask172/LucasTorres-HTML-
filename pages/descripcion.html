@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Descripción del producto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="robots" content="noindex">
+    <!-- Plantilla mínima para detalle de producto; puede ser rellenada dinámicamente -->
+    <style>
+        .detalle {
+            max-width: 900px;
+            margin: 1.5rem auto;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .detalle-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .detalle-img {
+            flex: 1 1 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .detalle-info {
+            flex: 1 1 280px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="../index.html"><img src="../assets/img/logoprincipal.png" alt="Logo"></a>
+                <h1>ECO.moda.infantil</h1>
+            </div>
+            <nav aria-label="principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                </ul>
+            </nav>
+            <div class="cart-area">
+                <button id="btn-toggle-carrito" aria-expanded="false" aria-controls="carrito-listado">🛒 <span id="contador-carrito">0</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="detalle">
+        <div class="detalle-grid">
+            <div class="detalle-img">
+                <img src="https://picsum.photos/400/300" alt="Imagen del producto" style="max-width:100%;height:auto;">
+            </div>
+            <div class="detalle-info">
+                <h1>Nombre del producto</h1>
+                <p class="precio">$0.00</p>
+                <p>Descripción corta del producto. Aquí puedes poner materiales, talles y datos útiles.</p>
+                <p>Talla: <select>
+                        <option>0-3M</option>
+                        <option>6M</option>
+                        <option>1A</option>
+                    </select></p>
+                <button class="btn-agregar" data-id="0" data-precio="0" data-nombre="Nombre del producto">Añadir al
+                    Carrito</button>
+            </div>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+
+</html>

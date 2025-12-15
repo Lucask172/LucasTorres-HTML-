@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-        </ul>
-    </nav>
-    <section>
-        <form action="https://formspree.io/f/movklbqb" method="POST">
-        <label>Nombre:
-        <input type="text" name="nombre" required>
-        </label><br>
-        <label>Email:
-        <input type="email" name="email" required>
-        </label><br>
-        <label>Mensaje:
-        <textarea name="mensaje" required></textarea>
-        </label><br>
-        <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <section>
-            <h1>ECO.moda.infantil : Contacto y Gestión de Pedidos</h1>
+        <header>
+                <div class="header-inner">
+                        <div class="brand">
+                                <a href="../index.html"><img src="../assets/img/logoprincipal.png" alt="Logo"></a>
+                                <h1>ECO.moda.infantil</h1>
+                        </div>
+                        <nav aria-label="principal">
+                                <ul>
+                                        <li><a href="../index.html">Inicio</a></li>
+                                        <li><a href="../index.html#productos">Productos</a></li>
+                                </ul>
+                        </nav>
+                        <div class="cart-area">
+                                <button id="btn-toggle-carrito" aria-expanded="false" aria-controls="carrito-listado">🛒 <span id="contador-carrito">0</span></button>
+                        </div>
+                </div>
+        </header>
+        <main>
+            <section class="contact-form">
+                <h2>Contacto</h2>
+                <form action="https://formspree.io/f/movklbqb" method="POST">
+                    <label>Nombre
+                        <input type="text" name="nombre" required placeholder="Tu nombre">
+                    </label>
+                    <label>Email
+                        <input type="email" name="email" required placeholder="tu@correo.com">
+                    </label>
+                    <label>Mensaje
+                        <textarea name="mensaje" required placeholder="Escribe tu consulta"></textarea>
+                    </label>
+                    <button type="submit" class="btn-primary">Enviar</button>
+                </form>
+            </section>
+            <section>
+                <h1>ECO.moda.infantil : Contacto y Gestión de Pedidos</h1>
     
     <table id="formulario-contacto">
         <caption>Formulario de Contacto y Consulta de Artículo</caption>
@@ -113,6 +128,7 @@
         </tbody>
     </table>
     </section>
-
+    </main>
+    <script src="../script.js"></script>
 </body>
 </html>

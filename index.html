@@ -1,120 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECO_moda_infantil</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tienda ECO.moda.infantil - ropa infantil sostenible" />
+    <meta name="author" content="ECO.moda.infantil" />
+    <title>ECO.moda.infantil — Tienda</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/img/favicon.ico" />
 </head>
 
 <body>
     <header>
-        <img src="./assets/img/logoprincipal.png" alt="Logo de la marca">
-        <H1>ECO.moda.infantil</H1>
+        <div class="header-inner">
+            <div class="brand">
+                <img src="assets/img/logoprincipal.png" alt="ECO.moda.infantil logo" />
+                <h1>ECO.moda.infantil</h1>
+            </div>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="pages/carritodecompras.html">Carrito</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-area">
+                <button id="btn-toggle-carrito" aria-expanded="false" aria-controls="carrito-listado" aria-label="Abrir carrito">
+                    🛒 <span id="contador-carrito">0</span>
+                </button>
+            </div>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="./pages/carritodecompras.html">Carrito de compras</a></li>
-            <li><a href="./pages/nosotros.html">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+
     <main>
-        <h2>Bienvenido a nuestro sitio!</h2>
+        <section id="productos" class="section-products">
+            <h2>Productos</h2>
+            <div id="contenedor-productos" aria-live="polite"></div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/movklbqb" method="POST">
+                <label>Nombre
+                    <input type="text" name="nombre" required placeholder="Ingrese su nombre" />
+                </label>
+                <label>Email
+                    <input type="email" name="email" required placeholder="tu@correo.com" />
+                </label>
+                <label>Mensaje
+                    <textarea name="mensaje" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                </label>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </section>
     </main>
-    <section id="producto">
-        <h2>Productos</h2>
-        <div class="products">
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=1" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=2" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=3" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=4" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=5" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <a href="./pages/descripcion.html">
-                    <h4>Nombre-Producto</h4>
-                    <img src="https://picsum.photos/300/200?random=6" alt="imagen de producto">
-                    <p>Descripcion breve del producto..</p>
-                    <p>Precio: <span>$XXX.XX</span></p>
-                </a>
-                <button>Añadir al Carrito</button>
+
+    <!-- Carrito (sidebar/modal simple) -->
+    <aside id="carrito-listado" class="carrito-hidden" aria-hidden="true">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="btn-cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+        </div>
+        <div id="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">Total: <strong id="carrito-total">$0.00</strong></div>
+            <div class="carrito-actions">
+                <button id="vaciar-carrito" class="btn-danger">Vaciar</button>
+                <button id="checkout" class="btn-primary">Finalizar compra</button>
             </div>
         </div>
-    </section>
-    <section id="contacto">
-        <h2>Contactate con nosotros!!</h2>
-        <form action="https://formspree.io/f/movklbqb" method="POST">
-            <label>Nombre:
-                <input type="text" name="nombre" required placeholder="Ingrese su Nombre">
-            </label><br>
-            <label>Email:
-                <input type="email" name="email" required placeholder="Ingrese su email">
-            </label><br>
-            <label>Mensaje:
-                <textarea name="mensaje" required placeholder="Ingrese duda o consulta"></textarea>
-            </label><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <article>
-    </article>
+    </aside>
+
     <footer>
-        <div class="footer">
-            <p>© 2025 ECO.moda.infatil. Todos los derechos reservados.</p>
-        </div>
-        <div class="contacto">
-            <a href="">
-                <!-- Whatsapp-->
-            </a>
-            <a href="">
-                <!-- Instagram-->
-            </a>
+        <div class="footer-inner">
+            <p>© 2025 ECO.moda.infantil. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
